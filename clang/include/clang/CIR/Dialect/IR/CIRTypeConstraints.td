@@ -380,4 +380,14 @@ def CIR_AnyScalarType : AnyTypeOf<CIR_ScalarTypes, "cir scalar type"> {
   let cppFunctionName = "isScalarType";
 }
 
+//===----------------------------------------------------------------------===//
+// Comparable Type predicates
+//===----------------------------------------------------------------------===//
+
+def CIR_ComparableType
+    : AnyTypeOf<[CIR_AnyIntType, CIR_AnyFloatType, CIR_AnyPtrType],
+                "comparable type"> {
+  let cppFunctionName = "isComparableType";
+}
+
 #endif // CLANG_CIR_DIALECT_IR_CIRTYPECONSTRAINTS_TD
